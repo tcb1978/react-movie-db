@@ -20,7 +20,7 @@ module.exports = {
   "plugins": [
       "react",
   ],
-  "extends": "airbnb",
+  "extends": "google",
   "rules": {
     "react/jsx-filename-extension": 0,
     "function-paren-newline": 0

@@ -33,9 +33,21 @@ class MovieDetail extends Component {
             <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
           </Overdrive>
           <div>
-            <h1>{movie.title}</h1>
-            <h3>{movie.release_date}</h3>
-            <p>{movie.overview}</p>
+            {this.state.movie.title ? (
+              <h1>{movie.title}</h1>
+            ) : (
+              <i>A title is not currently available for this film.</i>
+            )}
+            {this.state.movie.release_date ? (
+              <h3>{movie.release_date}</h3>
+            ) : (
+              <i>A release date is not currently available for this film.</i>
+            )}
+            {this.state.movie.overview ? (
+              <p>{movie.overview}</p>
+            ) : (
+              <i>An overview is not available for this film.</i>
+            )}
           </div>
         </MovieInfo>
       </MovieWrapper>
